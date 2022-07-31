@@ -16,7 +16,7 @@ Anaconda3를 이용한 가상환경에서 구축하였다.
 Python 3.5.6
 Pytorch 1.0.1
 # GPU 사용
-CUDA 10.0\
+CUDA 10.0
 ```
 
 ## Pytorch & CUDA 설치
