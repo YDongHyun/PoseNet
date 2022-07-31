@@ -38,7 +38,7 @@ conda install pytorch==1.0.1 torchvision==0.2.2 -c pytorch
 nvcc —version
 ```
 
-Pytorch상에서 CUDA가속을 사용할 수 있는지 아래와 같이 확인할 수 있다
+Pytorch상에서 GPU 사용할 수 있는지 아래와 같이 확인할 수 있다
 
 ```jsx
 python
@@ -47,7 +47,7 @@ python
 True
 ```
 
-True가 출력되면 정상적으로 CUDA 가속을 사용할 수 있다.
+True가 출력되면 정상적으로 GPU를 사용할 수 있다.
 
 ## 라이브러리 설치
 
