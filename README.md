@@ -68,3 +68,79 @@ pip install tensorboardX
 ```
 
 위 과정을 완료하면 실습을 위한 환경 구축은 끝났다.
+
+## PoseNet 다운
+
+적절한 디렉토리에 다음과 같은 명령어를 입력하여 PoseNet을 다운받는다.
+
+`git clone https://github.com/youngguncho/PoseNet-Pytorch.git`
+
+PoseNet이 다운된 디렉토리에 실습할 데이터셋을 집어넣은 후 실습을 진행한다.
+
+</br>
+
+# PoseNet Training&Test
+
+## Training
+
+먼저 트레이닝을 위해  PoseNet이 설치된 디렉토리로 이동한다.
+
+그 후 아래의 명령어를 통해 Training을 진행 할 수 있다.
+
+```jsx
+python train.py --image_path <이미지 경로> --metadata_path <metadata 경로>
+```
+
+기본적으로 image_path와 metadata_path는 필수적으로 입력해야 한다.
+
+추가적으로 train.py파일을 살펴본 결과 다음과 같은 parameter들을 확인 할 수 있었다.
+
+![Untitled (1)](https://user-images.githubusercontent.com/80799025/182063253-ae1a6d34-0a49-4e55-9727-924cfa02ef2c.png)
+
+만약 기존 파라미터를 수정하고싶다면, 명령어에 추가적으로 입력하여 실행하면 된다.
+
+EX)
+
+```jsx
+python train.py --image_path ./posenet/KingsCollege --metadata_path ./posenet/KingsCollege/dataset_train.txt **--num_epochs 100**
+```
+
+만약 중단된 트레이닝을 이어서 하고싶다면 다음 명령어를 통해 재개할 수 있다.
+
+```jsx
+python train.py --image_path <이미지 경로> --metadata_path <metadata 경로> --pretrained_model <원하는 epoch>
+```
+
+tensorboard를 이용하여 확인 할 수 있다. (수정중)
+
+```jsx
+tensorboard --logdir=./로그디렉토리/
+```
+
+## Test
+
+test를 위해 먼저 트레이닝된 파일이 `models_<dataset 이름>` 폴더 안에 **pth**파일이 존재해야 한다.
+
+아래 명령어를 통해 test를 진행할 수 있다.
+
+```jsx
+python test.py --image_path <이미지 경로> --metadata_path <metadata 경로>
+```
+
+위 명령어는 기본 epoch이 400이므로, 399.pth파일을 찾을것이다.
+
+만약 epoch을 다르게 설정하였다면 아래 명령어를 통해 test할 수 있다.
+
+```jsx
+python test.py --image_path <이미지 경로> --metadata_path <metadata 경로> --test_model <원하는 epoch>
+```
+
+test를 통해 최종적으로 결과를 얻을 수 있다.
+
+## 결과
+
+![Untitled (2)](https://user-images.githubusercontent.com/80799025/182063269-803b847a-97b2-4a82-ab57-61f5715d870d.png)
+
+다음과 같은 결과를 얻을 수 있다.  `거리오차/각도 오차`
+
+거리의 오차와, 각도의 오차를 확인 할 수 있다.
