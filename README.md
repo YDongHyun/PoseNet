@@ -64,6 +64,7 @@ pip install pandas
 pip install matplotlib
 
 # tensorboardX 설치
+pip install tensorboard
 pip install tensorboardX
 ```
 
