@@ -112,11 +112,23 @@ python train.py --image_path ./posenet/KingsCollege --metadata_path ./posenet/Ki
 python train.py --image_path <이미지 경로> --metadata_path <metadata 경로> --pretrained_model <원하는 epoch>
 ```
 
-tensorboard를 이용하여 확인 할 수 있다. (수정중)
+</br>
+
+또한 tensorboard를 이용하여 결과를 시각적으로 확인 할 수 있다.
 
 ```jsx
 tensorboard --logdir=./로그디렉토리/
 ```
+log 디렉토리는 학습 후 결과로 나오는 `summary_<dataset 이름>` 폴더를 경로로 지정해주면 된다.
+그러면 다음과 같이 터미널에 로컬 주소가 나타난다.
+
+![image](https://user-images.githubusercontent.com/80799025/182791642-66392fee-7240-4626-b460-fad6f44cc13b.png)
+
+다음 링크를 복사하여 접속하면 다음과 같은 결과를 확인할 수 있다.
+</br>
+EX)
+
+![King_College](https://user-images.githubusercontent.com/80799025/182791718-e29f788b-5186-4a8e-a766-017dfe620fe9.JPG)
 
 ## Test
 
