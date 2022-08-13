@@ -103,7 +103,7 @@ python train.py --image_path <이미지 경로> --metadata_path <metadata 경로
 EX)
 
 ```jsx
-python train.py --image_path ./posenet/KingsCollege --metadata_path ./posenet/KingsCollege/dataset_train.txt **--num_epochs 100**
+python train.py --image_path ./posenet/KingsCollege --metadata_path ./posenet/KingsCollege/dataset_train.txt --num_epochs 100
 ```
 
 만약 중단된 트레이닝을 이어서 하고싶다면 다음 명령어를 통해 재개할 수 있다.
