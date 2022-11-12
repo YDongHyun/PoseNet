@@ -1,3 +1,5 @@
+# colmap image.txt file to Posenet dataset txt file converter
+
 edited_lines = []
 folder_name="image/"
 with open("images.txt",'r') as f:
