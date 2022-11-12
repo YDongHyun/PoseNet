@@ -9,7 +9,7 @@ with open("images.txt",'r') as f:
 with open(new_txt_filename, 'w') as f:
     for i, line in enumerate(lines):
         print(i)
-        if i%2==0:
+        if i>3 and i%2==0:
             list_file = line.split()
             del list_file[0],list_file[7]
             new_line=[folder_name+list_file[7],list_file[0],list_file[1],list_file[2],
