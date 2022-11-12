@@ -12,8 +12,8 @@ with open(new_txt_filename, 'w') as f:
         if i>3 and i%2==0:
             list_file = line.split()
             del list_file[0],list_file[7]
-            new_line=[folder_name+list_file[7],list_file[0],list_file[1],list_file[2],
-                      list_file[3],list_file[6],list_file[5],list_file[4]]
+            new_line=[folder_name+list_file[7],list_file[6],list_file[5],list_file[4],
+                      list_file[0],list_file[1],list_file[2],list_file[3]]
             new_line = ' '.join(new_line)
             print(new_line)
             f.write(new_line+'\n')
