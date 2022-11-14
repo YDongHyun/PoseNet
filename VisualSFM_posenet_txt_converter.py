@@ -1,3 +1,4 @@
+# VisualSFM NVM file to Posenet dataset txt file converter
 
 new_txt_filename = input("write new_txt_filename (write file format) : ")
 image_folder_name = input("write saved image_folder_name : ")
